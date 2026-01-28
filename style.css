@@ -42,6 +42,40 @@ header {
     color: #fff;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        flex-direction: column;
+        display: none;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
 /* ===== HOME SECTION ===== */
 .home {
     height: 100vh;
@@ -108,6 +142,16 @@ header {
     border-radius: 5px;
 }
 
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-text p {
+        margin: auto;
+    }
+}
 
 /* ===== SECTIONS ===== */
 section {
@@ -119,6 +163,21 @@ section {
     font-size: 32px;
     margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+    section {
+        padding: 50px 6%;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
 
 /* ===== SKILLS ===== */
 .skills-container {
@@ -135,6 +194,14 @@ section {
     border-radius: 20px;
 }
 
+.skills-container {
+    gap: 10px;
+}
+
+.skill {
+    font-size: 14px;
+}
+
 /* ===== PROJECTS ===== */
 .project-card {
     background: #fff;
@@ -143,6 +210,12 @@ section {
     max-width: 500px;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+@media (max-width: 768px) {
+    .project-card {
+        margin: 15px 5px;
+        padding: 15px;
+    }
 }
 
 /* ===== CONTACT ===== */
@@ -160,6 +233,15 @@ input, textarea {
 button {
     border: none;
     cursor: pointer;
+}
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
 }
 
 /* ===== FOOTER ===== */
@@ -192,6 +274,15 @@ footer {
     background: #f2f2f2;
 }
 
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.education-table {
+    min-width: 600px;
+}
+
 @media (max-width: 768px) {
     .home-container {
         flex-direction: column-reverse;
@@ -208,3 +299,4 @@ footer {
         margin-bottom: 20px;
     }
 }
+
